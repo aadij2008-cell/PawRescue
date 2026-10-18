@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI First Aid | Animal Rescue</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">🐾 Animal Rescue</a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="emergency.html">Emergency Rescue</a>
+            <a href="routine.html">Find Care</a>
+            <a href="firstaid.html" class="active">AI First Aid</a>
+        </div>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <header class="page-hero">
+        <span class="eyebrow">CARE STARTS WITH KNOWLEDGE</span>
+
+        <h1>Help an Animal.<br>One Step at a Time.</h1>
+
+        <p>
+            Describe what you have noticed, and get preliminary
+            first-aid guidance while you arrange appropriate
+            veterinary care.
+        </p>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="page-content">
+
+        <!-- IMPORTANT INFORMATION -->
+        <section class="info-panel">
+            <h2>🐾 Before You Begin</h2>
+
+            <p>
+                Stay calm and observe the animal from a safe distance.
+                Injured or frightened animals may bite or scratch.
+                Avoid handling an unfamiliar animal unnecessarily.
+            </p>
+
+            <p>
+                <strong>Important:</strong> This tool provides preliminary
+                guidance only. It cannot diagnose an animal or replace
+                a veterinarian. For severe injuries, breathing difficulties,
+                heavy bleeding, suspected poisoning, or unconsciousness,
+                contact a veterinarian or animal rescue service immediately.
+            </p>
+        </section>
+
+
+        <!-- FIRST AID FORM -->
+        <section class="form-card">
+
+            <div class="section-heading">
+                <span class="eyebrow">FIRST AID ASSISTANT</span>
+                <h2>What is happening to the animal?</h2>
+
+                <p>
+                    Describe the animal's condition and any symptoms
+                    you have observed.
+                </p>
+            </div>
+
+            <form id="firstAidForm">
+
+                <div class="form-group">
+                    <label for="injuryDescription">
+                        Describe the situation
+                    </label>
+
+                    <textarea
+                        id="injuryDescription"
+                        name="injury_description"
+                        rows="6"
+                        placeholder="Example: I found a stray dog limping and avoiding putting weight on one leg..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Get First-Aid Guidance →
+                </button>
+
+            </form>
+
+            <!-- BACKEND RESPONSE APPEARS HERE -->
+            <div id="firstAidResult" class="result" aria-live="polite"></div>
+
+        </section>
+
+
+        <!-- SAFETY INFORMATION -->
+        <section class="info-panel">
+            <h2>💚 What Should You Do?</h2>
+
+            <ul>
+                <li>Keep yourself and the animal away from traffic or other immediate dangers, if safe to do so.</li>
+                <li>Contact a qualified veterinarian or animal rescue organisation for professional help.</li>
+                <li>Do not give human medicines or attempt treatments unless a veterinarian instructs you to.</li>
+                <li>Do not force food or water on an injured or unconscious animal.</li>
+            </ul>
+        </section>
+
+
+        <!-- OTHER FEATURES -->
+        <section class="info-panel">
+            <h2>Need More Help?</h2>
+
+            <p>
+                If an animal needs urgent assistance, use our emergency
+                reporting page. If you are looking for veterinary care
+                or NGO assistance, visit our care-finding page.
+            </p>
+
+            <div class="action-links">
+                <a href="emergency.html" class="submit-button">
+                    Report an Emergency
+                </a>
+
+                <a href="routine.html" class="submit-button">
+                    Find Animal Care
+                </a>
+            </div>
+        </section>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Made with 💚 for the animals who need us.</p>
+        <p>Animal Rescue & Health | Every Paw Deserves a Helping Hand</p>
+    </footer>
+
+</body>
+</html>

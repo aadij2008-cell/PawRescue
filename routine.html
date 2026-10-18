@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find a Vet or NGO | PawRescue</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">🐾 PawRescue</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="emergency.html">Emergency Rescue</a>
+            <a href="routine.html" class="active">Find Care</a>
+            <a href="firstaid.html">AI First Aid</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+
+        <span class="eyebrow">ANIMAL CARE DIRECTORY</span>
+
+        <h1>Every Animal Deserves Care.</h1>
+
+        <p>
+            Looking for help for a stray animal or your pet?
+            Tell us where you are, which animal needs assistance,
+            and what kind of care it may require.
+        </p>
+
+    </section>
+
+
+    <main class="page-content">
+
+        <!-- Information Panel -->
+        <section class="info-panel">
+
+            <h2>Find the Right Kind of Help</h2>
+
+            <p>
+                <strong>Veterinary clinics</strong> can provide
+                professional examinations, treatment and medical care.
+                <br><br>
+
+                <strong>Animal welfare NGOs</strong> may be able to help
+                with stray animals, rescue coordination and animal welfare.
+                Their services and availability vary by organisation.
+                <br><br>
+
+                Submit the details below to request suitable facility
+                information from PawRescue.
+            </p>
+
+        </section>
+
+
+        <!-- Search Form -->
+        <section class="form-card">
+
+            <h2>Find Animal Care Near You</h2>
+
+            <p class="form-intro">
+                Tell us a little about the animal so we can process
+                your request.
+            </p>
+
+
+            <form id="routineForm">
+
+                <div class="form-grid">
+
+                    <!-- Location -->
+                    <div class="form-group">
+
+                        <label for="locationName">
+                            Your Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="locationName"
+                            placeholder="e.g. Preet Vihar, Delhi"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Animal Type -->
+                    <div class="form-group">
+
+                        <label for="petType">
+                            Animal Type
+                        </label>
+
+                        <select id="petType" required>
+
+                            <option value="">Select animal</option>
+                            <option value="Dog">Dog</option>
+                            <option value="Cat">Cat</option>
+                            <option value="Bird">Bird</option>
+                            <option value="Cow">Cow</option>
+                            <option value="Other">Other</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Condition -->
+                    <div class="form-group full-width">
+
+                        <label for="condition">
+                            What Kind of Help Is Needed?
+                        </label>
+
+                        <select id="condition" required>
+
+                            <option value="">Choose a situation</option>
+                            <option value="Routine check-up">
+                                Routine check-up
+                            </option>
+
+                            <option value="Injury">
+                                Injury or wound
+                            </option>
+
+                            <option value="Illness">
+                                Signs of illness
+                            </option>
+
+                            <option value="Stray animal assistance">
+                                Help with a stray animal
+                            </option>
+
+                            <option value="Rescue support">
+                                Rescue support
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="submit-button">
+                    🔎 Find Animal Care
+                </button>
+
+            </form>
+
+
+            <!-- Search Results -->
+            <div
+                id="routineResult"
+                class="result"
+                aria-live="polite"
+            ></div>
+
+
+            <p class="form-note">
+                Facility information returned by the current backend
+                may contain demonstration data. Verify the organisation,
+                contact details, opening hours and services directly
+                before travelling. For an urgent injury or medical
+                emergency, contact a veterinarian or local rescue service
+                immediately.
+            </p>
+
+        </section>
+
+
+        <!-- Additional Information -->
+        <section class="info-panel" style="margin-top: 30px;">
+
+            <h2>Not Sure Where to Start?</h2>
+
+            <p>
+                If an animal is in immediate danger, visit our
+                Emergency Rescue page. If you need preliminary guidance
+                while arranging professional care, visit AI First Aid.
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px;">
+
+                <a href="emergency.html" class="primary-button">
+                    Emergency Rescue →
+                </a>
+
+                <a href="firstaid.html" class="primary-button">
+                    AI First Aid →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <a href="index.html" class="back-link">
+            ← Back to Home
+        </a>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <a href="index.html" class="logo">🐾 PawRescue</a>
+
+        <p>Helping people find the right care for animals.</p>
+
+        <p class="footer-small">
+            PawRescue does not replace professional veterinary advice.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

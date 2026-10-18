@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Rescue | PawRescue</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">🐾 PawRescue</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="emergency.html" class="active">Emergency Rescue</a>
+            <a href="routine.html">Find Care</a>
+            <a href="firstaid.html">AI First Aid</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Page Introduction -->
+    <section class="page-hero">
+
+        <span class="eyebrow">URGENT ANIMAL ASSISTANCE</span>
+
+        <h1>An Animal Needs Help?</h1>
+
+        <p>
+            Every second can matter when an animal is in distress.
+            Share the animal's location and describe the situation
+            to submit an emergency report.
+        </p>
+
+    </section>
+
+
+    <main class="page-content">
+
+        <!-- Visual Panic Button (Non-functional) -->
+        <div class="panic-button-container">
+
+            <button class="panic-button" type="button">
+                <span class="panic-icon">!</span>
+                <span>PANIC BUTTON</span>
+            </button>
+
+        </div>
+
+
+        <!-- Instructions -->
+        <section class="info-panel">
+
+            <h2>How Emergency Reporting Works</h2>
+
+            <p>
+                <strong>01.</strong> Identify the animal.
+                <br><br>
+
+                <strong>02.</strong> Enter its location or use
+                the location button.
+                <br><br>
+
+                <strong>03.</strong> Describe what happened and
+                submit the report.
+            </p>
+
+        </section>
+
+
+        <!-- Emergency Form -->
+        <section class="form-card">
+
+            <h2>Report an Animal Emergency</h2>
+
+            <p class="form-intro">
+                Please provide as much accurate information as possible.
+            </p>
+
+
+            <form id="emergencyForm">
+
+                <div class="form-grid">
+
+                    <!-- Animal Type -->
+                    <div class="form-group">
+
+                        <label for="animalType">
+                            Type of Animal
+                        </label>
+
+                        <select id="animalType" required>
+
+                            <option value="">Select animal</option>
+                            <option value="Dog">Dog</option>
+                            <option value="Cat">Cat</option>
+                            <option value="Bird">Bird</option>
+                            <option value="Cow">Cow</option>
+                            <option value="Other">Other</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Latitude -->
+                    <div class="form-group">
+
+                        <label for="latitude">
+                            Latitude
+                        </label>
+
+                        <input
+                            type="number"
+                            id="latitude"
+                            step="any"
+                            min="-90"
+                            max="90"
+                            placeholder="e.g. 28.6139"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Longitude -->
+                    <div class="form-group">
+
+                        <label for="longitude">
+                            Longitude
+                        </label>
+
+                        <input
+                            type="number"
+                            id="longitude"
+                            step="any"
+                            min="-180"
+                            max="180"
+                            placeholder="e.g. 77.2090"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Location Button -->
+                    <div class="form-group">
+
+                        <label>Current Location</label>
+
+                        <button
+                            type="button"
+                            id="locationButton"
+                            class="submit-button"
+                        >
+                            📍 Get My Location
+                        </button>
+
+                    </div>
+
+
+                    <!-- Description -->
+                    <div class="form-group full-width">
+
+                        <label for="emergencyDescription">
+                            Describe the Emergency
+                        </label>
+
+                        <textarea
+                            id="emergencyDescription"
+                            placeholder="Describe the animal's condition and what happened..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="submit-button">
+                    🚨 Submit Emergency Report
+                </button>
+
+            </form>
+
+
+            <!-- Backend Response -->
+            <div
+                id="emergencyResult"
+                class="result"
+                aria-live="polite"
+            ></div>
+
+
+            <p class="form-note">
+                PawRescue submits emergency information for processing.
+                Submission does not guarantee that a rescue team has
+                been notified or dispatched. Contact an appropriate
+                local animal rescue service or veterinarian directly
+                when immediate assistance is needed.
+            </p>
+
+        </section>
+
+
+        <a href="index.html" class="back-link">
+            ← Back to Home
+        </a>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <a href="index.html" class="logo">🐾 PawRescue</a>
+
+        <p>Every life matters. Every helping hand counts.</p>
+
+        <p class="footer-small">
+            PawRescue does not replace professional veterinary care.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

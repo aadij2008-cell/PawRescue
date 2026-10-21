@@ -72,7 +72,17 @@ async def search_vets_in_background(
             if incident:
                 # Store encoded response string/json in database if your model supports it
                 # (Assuming you added or use a text column, otherwise safely ignored)
-                pass
+                db=db_session_factory()
+                try:
+                    incident=(db.query(IncidentModel).filter(IncidentModel.id==incident_id).first())
+                    if incident:
+                        incident.scraped_clinics=json.dumps(encoded_results)
+                        db.commit()
+                except Exception as db_err:
+                    db.rollback()
+                    print("Database save error:", db_err)
+                finally:
+                    db.close()
         except Exception as db_err:
             print("Cache save error:", db_err)
         finally:
@@ -99,8 +109,10 @@ async def broadcast_emergency(
     recent_threshold = datetime.utcnow() - timedelta(minutes=30)
     cached_incident = db.query(IncidentModel).filter(
         IncidentModel.latitude.between(data.latitude - 0.001, data.latitude + 0.001),
-        IncidentModel.longitude.between(data.longitude - 0.001, data.longitude + 0.001)
+        IncidentModel.longitude.between(data.longitude - 0.001, data.longitude + 0.001),
+        IncidentModel.created_at>=recent_threshold
     ).order_by(IncidentModel.id.desc()).first()
+    
 
     # STEP 1: Save the new emergency report.
     try:
